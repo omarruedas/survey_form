@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+<!--Form title and description-->
+<h1 id="title">Tesla Model Purchase</h1>
+<p id="description">Please fill out and submit form</p>
+<!--Form Begins-->
+    <form id="survey-form">
+<!--Name Selection-->
+        <label for="name" id="name-label">Name</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" class="form-input" required><br>
+            
+<!--Email Selection-->
+        <label for="email" id="email-label">Email</label>
+        <input type="email" id="email" name="email" placeholder="johndoe@tesla.com" class="form-input"required><br>
+        
+<!--Number Selection-->
+        <label for="number" id="number-label">Age</label>
+        <input type="number" id="number" name="number" min="18" max="100" placeholder="35" class="form-input"required><br>
+            
+<!--Dropdown Selection-->
+        <label for="cars" class="heads">Select model</label>
+        <select name="cars" id="dropdown" placeholder="choose" class="form-input"required>
+            <optgroup label="Model X">
+                <option value="base" class="model">Model X Base</option>
+                <option value="premium" class="model">Model X Premium</option>
+                </optgroup>
+                <optgroup label="Model Y">
+                <option value="base" class="model">Model Y Base</option>
+                <option value="premium" class="model">Model Y Premium</option>
+                <optgroup label="CyberTruck">
+                <option value="base" class="model">CyberTruck Base</option>
+                <option value="upgrade" class="model">CyberTruck 3.2</option>
+            </optgroup>
+        </select>
+        <br>
+        <br>
+<!--Radio selections-->
+        <label for="model-color" class="heads"><strong>Model color:</strong></label><br>
+
+        <input type="radio" id="model-color" name="color" value="white">
+        <label for="model-color">White</label><br>
+
+        <input type="radio" id="model-color" name="color" value="black">
+        <label for="model-color">Black</label><br>
+
+        <input type="radio" id="model-color" name="color" value="blue">
+        <label for="model-color">Blue</label><br>
+
+            
+        <br>
+        <br>
+<!--Checkboxes-->
+        <label for="features" class="heads">Add features:</label><br>
+        <input id="checkbox" type="checkbox" name="features" value="autopilot">
+        <label for="checkbox">Self Driving (Autopilot) - $12,000</label> <br>
+        <input type="checkbox" type="checkbox" name="features" value="four-wheel">
+        <label for="checkbox">Four-Wheel Drive - $3,000</label><br> 
+        <input type="checkbox" type="checkbox" name="features" value="safety-sense">
+        <label for="checkbox">Safety Sense - $2,000</label><br> 
+        <br>
+<!--Text Area-->
+        <label for="text-area" class="heads">Additonal Comments</label>
+        <br>
+        <textarea id="text-area" name="comments" rows="4" cols="72" placeholder="Enter comment here"></textarea>
+        <br>
+<!--Submit Button-->
+        <button id="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>
